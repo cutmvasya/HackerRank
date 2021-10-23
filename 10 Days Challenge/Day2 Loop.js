@@ -1,7 +1,6 @@
 /**
  * https://www.hackerrank.com/challenges/js10-loops/problem
  * print the string from the vowels to the consonant
- * @param {STRING} s 
  */
 function vowelsAndConsonants(s) {
     let vowels = []
@@ -46,3 +45,77 @@ function getGrade(score) {
     return grade;
 }
 getGrade(15)
+
+/**
+ * https://www.hackerrank.com/challenges/js10-switch/problem
+ * Day 2: Conditional Statements: Switch
+ */
+
+function getLetter(s) {
+    let letter;
+    // Write your code here
+    for (let i = 0; i < s.length; i++) {
+        switch (s[i]) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                return 'A';
+                break;
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'f':
+            case 'g':
+                return 'B';
+                break;
+            case 'h':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+                return 'C';
+                break;
+            case 'n':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+                return 'D';
+                break;
+            default:
+                return 'No'
+        }
+    }
+    return letter;
+}
+
+//cara dua
+
+function getLetter(s) {
+    let letter;
+    // Write your code here
+    switch (true) {
+        case 'aeiou'.includes(s[0]):
+            letter = 'A';
+            break;
+        case 'bcdfg'.includes(s[0]):
+            letter = 'B';
+            break;
+        case 'hjklm'.includes(s[0]):
+            letter = 'C';
+            break;
+        case 'npqrstvwxyz'.includes(s[0]):
+            letter = 'D';
+            break;
+    }
+    return letter;
+}
